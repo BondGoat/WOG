@@ -9,7 +9,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.wog.intellcall.R;
-import com.wog.intellcall.HomeActivity.DummySectionFragment;
+import com.wog.intellcall.SetupActivity.DummySectionFragment;
 
 /**
  * A {@link FragmentPagerAdapter} that returns a fragment corresponding to

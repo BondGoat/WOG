@@ -213,3 +213,5 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+IntellCall/Implementation/Android/Trunk/gen/com/wog/intellcall/BuildConfig.java
+IntellCall/Implementation/Android/Trunk/gen/com/wog/intellcall/R.java

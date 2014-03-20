@@ -30,13 +30,17 @@ public class SplashActivity extends Activity {
 					e.printStackTrace();
 				}
 			}
-		});
+		}).start();
 	}
 	
 	private Handler mSplashScreenHandler = new Handler() {
 		public void handleMessage(android.os.Message msg) {
-			Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+			Intent intent = new Intent(getApplicationContext(), SetupActivity.class);
 			startActivity(intent);
+			
+			overridePendingTransition(R.anim.push_up_in, R.anim.push_up_out);
+			
+			SplashActivity.this.finish();
 		};
 	};
 }
