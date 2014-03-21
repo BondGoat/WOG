@@ -1,5 +1,6 @@
 package com.wog.intellcall.adapters;
 
+import java.util.List;
 import java.util.Locale;
 
 import android.content.Context;
@@ -9,7 +10,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.wog.intellcall.R;
-import com.wog.intellcall.SetupActivity.DummySectionFragment;
 
 /**
  * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
@@ -17,41 +17,28 @@ import com.wog.intellcall.SetupActivity.DummySectionFragment;
  */
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 	Context mContext;
+	List<Fragment> mFragments;
 	
-	public SectionsPagerAdapter(Context context, FragmentManager fm) {
+	public SectionsPagerAdapter(Context context, FragmentManager fm, List<Fragment> fragments) {
 		super(fm);
 		mContext = context;
+		if(fragments != null && fragments.size() > 0)
+			mFragments = fragments;
 	}
 
 	@Override
 	public Fragment getItem(int position) {
-		// getItem is called to instantiate the fragment for the given page.
-		// Return a DummySectionFragment (defined as a static inner class
-		// below) with the page number as its lone argument.
-		Fragment fragment = new DummySectionFragment();
-		Bundle args = new Bundle();
-		args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
-		fragment.setArguments(args);
-		return fragment;
+		return mFragments.get(position);		
 	}
 
 	@Override
 	public int getCount() {
 		// Show 3 total pages.
-		return 3;
+		return (mFragments != null) ? mFragments.size() : 0;
 	}
 
 	@Override
-	public CharSequence getPageTitle(int position) {
-		Locale l = Locale.getDefault();
-		switch (position) {
-		case 0:
-			return mContext.getString(R.string.title_section1).toUpperCase(l);
-		case 1:
-			return mContext.getString(R.string.title_section2).toUpperCase(l);
-		case 2:
-			return mContext.getString(R.string.title_section3).toUpperCase(l);
-		}
-		return null;
+	public CharSequence getPageTitle(int position) {		
+		return String.valueOf(mFragments.get(position).getId());
 	}
 }
