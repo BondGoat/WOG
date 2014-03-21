@@ -215,3 +215,9 @@ pip-log.txt
 .mr.developer.cfg
 IntellCall/Implementation/Android/Trunk/gen/com/wog/intellcall/BuildConfig.java
 IntellCall/Implementation/Android/Trunk/gen/com/wog/intellcall/R.java
+IntellCall/Implementation/Android/Trunk/IntellCall/gen/com/wog/intellcall/BuildConfig.java
+IntellCall/Implementation/Android/Trunk/IntellCall/gen/com/wog/intellcall/R.java
+Projects/IntellCall/Implementation/Android/Trunk/IntellCall/gen/com/wog/intellcall/R.java
+Projects/IntellCall/Implementation/Android/Trunk/IntellCall/gen/com/wog/intellcall/BuildConfig.java
+Projects/IntellCall/Implementation/Android/Trunk/IntellCall/gen/com/wog/intellcall/BuildConfig.java
+Projects/IntellCall/Implementation/Android/Trunk/IntellCall/gen/com/wog/intellcall/BuildConfig.java
